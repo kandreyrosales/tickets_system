@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WEB PORTAL</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tickets<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{% url 'ticket:ticket_new' %}">New</a></li>
+{#                        {% if group_user == 'customer' %}#}
+                            <li><a href="{% url 'ticket:ticket_list' %}">Customer ticket List</a></li>
+{#                        {% endif %}#}
+{#                        {% if group_user == 'agent' %}#}
+                            <li><a href="{% url 'ticket:ticket_agent_list' %}">Tickets Agent List</a></li>
+{#                        {% endif %}#}
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'customer:register_customer' %}"> Sign up </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

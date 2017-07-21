@@ -1,0 +1,7 @@
+{% if group_user == "agent" %}
+    {% include 'ticket/ticket_agent_list.html' %}
+{% endif %}
+
+{% if group_user == "customer" %}
+    {% include 'ticket/ticket_list.html' %}
+{% endif %}
