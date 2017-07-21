@@ -1,5 +1,4 @@
 from django.db import models
-from apps.agents.models import Agent
 from django.contrib.auth.models import User
 
 # status list of tickets
